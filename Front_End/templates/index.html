@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h1>-- To Do List --</h1>
+    <p>
+      This is your ToDo list
+      <a type="button" href="./add_item">Add Item</a>
+    </p>
+    <ul>
+      {% for item in data%}
+      <h2>{{item.title}}</h2>
+      <p>{{item.description}}</p>
+      <br />
+      {% endfor %}
+    </ul>
+  </body>
+</html>

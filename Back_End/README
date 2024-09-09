@@ -1,0 +1,36 @@
+All requirements can be installed with pipenv
+
+install pipenv
+ - `pip install pipenv`
+
+shell into environment
+ - `pipenv shell`
+
+install pipfile
+ - `pipenv install`
+
+run tests
+ - `pipenv run pytest tests (outside shell)`
+ - `pytest tests (inside shell)`
+
+run application
+ - `flask run --port=8000`
+
+To install the database
+ - `pipenv install sqlalchemy alembic`
+ - `alembic init alembic`
+ - `alembic revision --autogenerate -m "Initial migration"`
+    - Add these to alembic File:
+        - `CREATE DATABASE rc_interview_assigment`
+        - `CREATE USER admin WITH PASSWORD 'admin'`
+        - `GRANT ALL PRIVILEGES ON DATABASE rc_interview_assignment TO admin`
+        - `CREATE SCHEMA todo_list AUTHORIZATION "admin"`
+        - ```CREATE TABLE todo_list.todo_items (
+            id int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
+            title varchar NOT NULL,
+            description varchar NULL,
+            created_at timestamp DEFAULT now() NOT NULL,
+            updated_at timestamp NULL,
+            iscompleted bool DEFAULT false NOT NULL,
+            CONSTRAINT todo_items_pk PRIMARY KEY (id))```
+ - `alembic upgrade head`
