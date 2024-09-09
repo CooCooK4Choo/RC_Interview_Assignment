@@ -1,0 +1,39 @@
+Front-End Application
+- Flask [v]
+- Jinja Templates [v]
+- Button to add item [v]
+- on adding item, redirect to index.html [v]
+
+ACTIONS:
+- Create an item [v]
+- List all items [v]
+
+
+Back-End Application
+- Flask [v]
+ACTIONS:
+- POST: /todo Create an item [v]
+- GET: /todos List all items [v]
+
+Database
+- Store todo items [v]
+
+- todo [v]
+ - Title [v]
+ - Description [v]
+ - created_at [v]
+ - updated_at [v]
+ - isCompleted [v]
+
+Unit Tests [v]
+Integration Tests [v]
+
+Flesh out to use model structure []
+
+Extra (Kinda):
+Alembic Migrations for:
+Create database [v]
+Create user [v]
+Create role [v]
+Create Schema [v]
+Create table [v]
